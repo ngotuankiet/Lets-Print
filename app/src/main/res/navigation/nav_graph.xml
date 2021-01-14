@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/startFragment">
+
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.android.letsprint.ui.fragment.StartFragment"
+        android:label="StartFragment" >
+        <action
+            android:id="@+id/action_startFragment_to_loginFragment"
+            app:destination="@id/loginFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.android.letsprint.ui.fragment.LoginFragment"
+        android:label="fragment_login"
+        tools:layout="@layout/fragment_login" >
+        <action
+            android:id="@+id/action_loginFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.android.letsprint.ui.fragment.SignUpFragment"
+        android:label="SignUpFragment" >
+        <action
+            android:id="@+id/action_signUpFragment_to_verificationPhoneFragment"
+            app:destination="@id/verificationPhoneFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/verificationPhoneFragment"
+        android:name="com.android.letsprint.ui.fragment.VerificationPhoneFragment"
+        android:label="VerificationPhoneFragment" >
+        <action
+            android:id="@+id/action_verificationPhoneFragment_to_OTPFragment"
+            app:destination="@id/OTPFragment" />
+    </fragment>
+    <dialog
+        android:id="@+id/OTPFragment"
+        android:name="com.android.letsprint.ui.fragment.OTPFragment"
+        android:label="OTPFragment" >
+        <action
+            android:id="@+id/action_OTPFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </dialog>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.android.letsprint.ui.fragment.ProfileFragment"
+        android:label="ProfileFragment" />
+</navigation>

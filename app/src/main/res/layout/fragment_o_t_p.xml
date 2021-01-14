@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="30dp"
+        android:elevation="5dp"
+        android:layout_margin="20dp"
+        android:orientation="vertical"
+        tools:context=".ui.fragment.OTPFragment">
+
+        <TextView
+            android:textSize="36sp"
+            android:textColor="#663695"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/enter_your_code" />
+        <TextView
+            android:id="@+id/tv_phone"
+            android:textColor="#663695"
+            android:textSize="18sp"
+            android:text="@string/code_is_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+       <EditText
+           android:id="@+id/ed_OTP"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"/>
+        <TextView
+            android:text="@string/send_the_code_again"
+            android:textColor="#663695"
+            android:textSize="18sp"
+            android:id="@+id/et_send_code_again"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+        <Button
+            android:id="@+id/btn_verity"
+            android:text="@string/verity"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/custom_btn_get_otp"
+            android:backgroundTint="#663695"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </LinearLayout>
+</layout>
